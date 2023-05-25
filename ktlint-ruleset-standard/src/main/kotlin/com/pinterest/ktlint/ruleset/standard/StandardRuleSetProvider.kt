@@ -9,7 +9,6 @@ import com.pinterest.ktlint.ruleset.standard.rules.ArgumentListWrappingRule
 import com.pinterest.ktlint.ruleset.standard.rules.BlockCommentInitialStarAlignmentRule
 import com.pinterest.ktlint.ruleset.standard.rules.ChainWrappingRule
 import com.pinterest.ktlint.ruleset.standard.rules.ClassNamingRule
-import com.pinterest.ktlint.ruleset.standard.rules.CommentSpacingRule
 import com.pinterest.ktlint.ruleset.standard.rules.CommentWrappingRule
 import com.pinterest.ktlint.ruleset.standard.rules.ContextReceiverWrappingRule
 import com.pinterest.ktlint.ruleset.standard.rules.DiscouragedCommentLocationRule
@@ -25,7 +24,6 @@ import com.pinterest.ktlint.ruleset.standard.rules.FunctionStartOfBodySpacingRul
 import com.pinterest.ktlint.ruleset.standard.rules.FunctionTypeReferenceSpacingRule
 import com.pinterest.ktlint.ruleset.standard.rules.IfElseBracingRule
 import com.pinterest.ktlint.ruleset.standard.rules.IfElseWrappingRule
-import com.pinterest.ktlint.ruleset.standard.rules.ImportOrderingRule
 import com.pinterest.ktlint.ruleset.standard.rules.IndentationRule
 import com.pinterest.ktlint.ruleset.standard.rules.KdocWrappingRule
 import com.pinterest.ktlint.ruleset.standard.rules.MaxLineLengthRule
@@ -49,9 +47,7 @@ import com.pinterest.ktlint.ruleset.standard.rules.NoSingleLineBlockCommentRule
 import com.pinterest.ktlint.ruleset.standard.rules.NoTrailingSpacesRule
 import com.pinterest.ktlint.ruleset.standard.rules.NoUnitReturnRule
 import com.pinterest.ktlint.ruleset.standard.rules.NoUnusedImportsRule
-import com.pinterest.ktlint.ruleset.standard.rules.NoWildcardImportsRule
 import com.pinterest.ktlint.ruleset.standard.rules.NullableTypeSpacingRule
-import com.pinterest.ktlint.ruleset.standard.rules.PackageNameRule
 import com.pinterest.ktlint.ruleset.standard.rules.ParameterListSpacingRule
 import com.pinterest.ktlint.ruleset.standard.rules.ParameterListWrappingRule
 import com.pinterest.ktlint.ruleset.standard.rules.ParameterWrappingRule
@@ -78,11 +74,10 @@ import com.pinterest.ktlint.ruleset.standard.rules.TrailingCommaOnDeclarationSit
 import com.pinterest.ktlint.ruleset.standard.rules.TryCatchFinallySpacingRule
 import com.pinterest.ktlint.ruleset.standard.rules.TypeArgumentListSpacingRule
 import com.pinterest.ktlint.ruleset.standard.rules.TypeParameterListSpacingRule
-import com.pinterest.ktlint.ruleset.standard.rules.UnnecessaryParenthesesBeforeTrailingLambdaRule
 import com.pinterest.ktlint.ruleset.standard.rules.WrappingRule
 
 public class StandardRuleSetProvider :
-    RuleSetProviderV3(RuleSetId.STANDARD) {
+    RuleSetProviderV3(RuleSetId("bbbbbbbbbb")) {
     override fun getRuleProviders(): Set<RuleProvider> =
         setOf(
             RuleProvider { AnnotationRule() },
@@ -91,7 +86,6 @@ public class StandardRuleSetProvider :
             RuleProvider { BlockCommentInitialStarAlignmentRule() },
             RuleProvider { ChainWrappingRule() },
             RuleProvider { ClassNamingRule() },
-            RuleProvider { CommentSpacingRule() },
             RuleProvider { CommentWrappingRule() },
             RuleProvider { ContextReceiverWrappingRule() },
             RuleProvider { DiscouragedCommentLocationRule() },
@@ -107,7 +101,6 @@ public class StandardRuleSetProvider :
             RuleProvider { FunKeywordSpacingRule() },
             RuleProvider { IfElseBracingRule() },
             RuleProvider { IfElseWrappingRule() },
-            RuleProvider { ImportOrderingRule() },
             RuleProvider { IndentationRule() },
             RuleProvider { KdocWrappingRule() },
             RuleProvider { MaxLineLengthRule() },
@@ -131,9 +124,7 @@ public class StandardRuleSetProvider :
             RuleProvider { NoTrailingSpacesRule() },
             RuleProvider { NoUnitReturnRule() },
             RuleProvider { NoUnusedImportsRule() },
-            RuleProvider { NoWildcardImportsRule() },
             RuleProvider { NullableTypeSpacingRule() },
-            RuleProvider { PackageNameRule() },
             RuleProvider { ParameterListSpacingRule() },
             RuleProvider { ParameterListWrappingRule() },
             RuleProvider { ParameterWrappingRule() },
@@ -160,7 +151,6 @@ public class StandardRuleSetProvider :
             RuleProvider { TryCatchFinallySpacingRule() },
             RuleProvider { TypeArgumentListSpacingRule() },
             RuleProvider { TypeParameterListSpacingRule() },
-            RuleProvider { UnnecessaryParenthesesBeforeTrailingLambdaRule() },
             RuleProvider { WrappingRule() },
         )
 }
